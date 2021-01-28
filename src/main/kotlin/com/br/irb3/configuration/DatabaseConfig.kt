@@ -11,13 +11,13 @@ import javax.sql.DataSource
 
 @Configuration
 class DatabaseConfig {
-    @Value("\${spring.datasource.url}")
-    private val dbUrl: String? = null
-
-    @Bean
-    fun dataSource(): DataSource? {
-        val config = HikariConfig()
-        config.jdbcUrl = dbUrl
-        return HikariDataSource(config)
-    }
+//    @Value("\${spring.datasource.url}")
+//    private val dbUrl: String? = null
+//
+//    @Bean
+//    fun dataSource(): DataSource? {
+//        val config = HikariConfig()
+//        config.jdbcUrl = dbUrl
+//        return HikariDataSource(config)
+//    }
 }
