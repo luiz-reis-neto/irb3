@@ -1,4 +1,4 @@
-package com.br.irb3.controller
+package com.br.irb3.health
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
