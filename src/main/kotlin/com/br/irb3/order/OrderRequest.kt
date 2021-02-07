@@ -3,7 +3,6 @@ package com.br.irb3.order
 import java.time.LocalDate
 
 data class OrderRequest(
-    val dia: LocalDate?,
     val operacao: Int?,
     val ticket: String?,
     val nomeAcao: String?,

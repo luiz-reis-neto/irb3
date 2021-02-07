@@ -4,6 +4,7 @@ import com.br.irb3.order.OrderRequest
 import java.time.LocalDate
 
 data class InvoiceRequest(
+    val codigoCorretora: String,
     val numeroNota: String,
     val dataOperacao: LocalDate,
     val emolumentos: Double,

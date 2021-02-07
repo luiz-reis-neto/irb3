@@ -12,7 +12,7 @@ class InvoiceController(val service: InvoiceService, val mapper: InvoiceMapper) 
     @PostMapping
     fun createInvoice(@RequestBody request: InvoiceRequest): ResponseEntity<Any>  {
         val invoice = mapper.requestToModel(request)
-        service.createInvoice(invoice)
+        service.createInvoice(invoice, request.codigoCorretora)
         return ResponseEntity.ok().build()
     }
 }

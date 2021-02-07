@@ -8,7 +8,6 @@ class OrderMapper {
         return Order(
             id = 0,
             idNota = 0,
-            ordemDia = request.dia,
             tipoOperacao = request.tipoOperacao,
             operacao = request.operacao,
             ticket = request.ticket,
