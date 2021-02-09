@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component
 class OrderMapper {
     fun requestToModel(request: OrderRequest): Order {
         return Order(
-            id = 0,
-            idNota = 0,
             tipoOperacao = request.tipoOperacao,
             operacao = request.operacao,
             ticket = request.ticket,

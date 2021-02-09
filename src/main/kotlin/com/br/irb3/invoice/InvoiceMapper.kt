@@ -23,4 +23,22 @@ class InvoiceMapper(private val orderMapper: OrderMapper) {
             orders = request.orders.map(orderMapper::requestToModel)
         )
     }
+
+    fun modelToEntity(model: Invoice): InvoiceEntity {
+        return InvoiceEntity(
+            numeroNota = model.numeroNota,
+            dataOperacao = model.dataOperacao,
+            emolumentos = model.emolumentos,
+            corretagem = model.corretagem,
+            liquidacao = model.liquidacao,
+            registro = model.registro,
+            iss = model.iss,
+            outrasTaxas = model.outrasTaxas,
+            taxaOperacao = model.taxaOperacao,
+            execucao = model.execucao,
+            taxaTermoOpcao = model.taxaTermoOpcao,
+            taxaCustodia = model.taxaCustodia,
+            imposto = model.imposto,
+        )
+    }
 }
