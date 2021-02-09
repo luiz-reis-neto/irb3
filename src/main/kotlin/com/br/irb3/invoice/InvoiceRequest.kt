@@ -14,7 +14,7 @@ data class InvoiceRequest(
     val iss: Double,
     val irr: Double,
     val outrasTaxas: Double,
-    val taxaoper: Double,
+    val taxaOperacao: Double,
     val execucao: Double,
     val taxaTermoOpcao: Double,
     val taxaCustodia: Double,

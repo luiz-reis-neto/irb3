@@ -15,7 +15,7 @@ class InvoiceMapper(private val orderMapper: OrderMapper) {
             registro = request.registro,
             iss = request.iss,
             outrasTaxas = request.outrasTaxas,
-            taxaoper = request.taxaoper,
+            taxaOperacao = request.taxaOperacao,
             execucao = request.execucao,
             taxaTermoOpcao = request.taxaTermoOpcao,
             taxaCustodia = request.taxaCustodia,

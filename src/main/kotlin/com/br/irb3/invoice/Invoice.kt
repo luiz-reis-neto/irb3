@@ -16,10 +16,10 @@ data class Invoice(@Id val id: Int? = null,
                    val registro: Double? = null,
                    val iss: Double? = null,
                    val outrasTaxas: Double? = null,
-                   val taxaoper: Double? = null,
+                   val taxaOperacao: Double? = null,
                    val execucao: Double? = null,
                    val taxaTermoOpcao: Double? = null,
                    val taxaCustodia: Double? = null,
                    val imposto: Double? = null,
-                   val orders: List<Order>
+                   val orders: List<Order> = listOf()
 )
