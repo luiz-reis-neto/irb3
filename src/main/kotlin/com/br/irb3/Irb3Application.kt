@@ -16,12 +16,3 @@ class Irb3Application
 fun main(args: Array<String>) {
 	runApplication<Irb3Application>(*args)
 }
-
-@Bean
-fun corsConfigurer(): WebMvcConfigurer? {
-	return object : WebMvcConfigurer {
-		override fun addCorsMappings(registry: CorsRegistry) {
-			registry.addMapping("/**").allowedOrigins("*")
-		}
-	}
-}
