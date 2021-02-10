@@ -8,7 +8,7 @@ import java.time.LocalDate
 data class Order(@Id val id: Int? = null,
                  val idNota: Int? = null,
                  val ordemDia: LocalDate? = null,
-                 val operacao: Int? = null,
+                 val operacao: Char? = null,
                  val ticket: String? = null,
                  val nomeAcao: String? = null,
                  val quantidade: Int? = null,
