@@ -3,7 +3,6 @@ package com.br.irb3.auth
 import com.br.irb3.configuration.JwtHelper
 import org.springframework.http.MediaType
 import org.springframework.security.core.userdetails.UserDetailsService
-import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.http.HttpStatus
@@ -19,15 +18,16 @@ import java.util.HashMap
 import org.springframework.security.core.userdetails.UsernameNotFoundException
 
 import org.springframework.security.crypto.password.PasswordEncoder
+import org.springframework.web.bind.annotation.RestController
 
 
-@Controller
+@RestController
 class AuthController(
     private val userDetailsService: UserDetailsService,
     private val passwordEncoder: PasswordEncoder,
     private val jwtHelper: JwtHelper
 ) {
-    @PostMapping("login", consumes = [ MediaType.APPLICATION_FORM_URLENCODED_VALUE ])
+    @PostMapping("/login", consumes = [ MediaType.APPLICATION_FORM_URLENCODED_VALUE ])
     fun login(@RequestParam email: String, @RequestParam password: String): LoginResult {
         val userDetails = try {
             userDetailsService.loadUserByUsername(email)
