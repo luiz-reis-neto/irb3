@@ -6,17 +6,25 @@ import org.springframework.security.core.userdetails.UserDetails
 class UserPrincipal(private val user: User) : UserDetails {
     val id : String = user.id.toString()
 
-    override fun getAuthorities(): MutableCollection<out GrantedAuthority> = authorities
+    override fun getAuthorities(): Collection<GrantedAuthority> = emptySet()
 
     override fun getPassword(): String = user.password
 
     override fun getUsername(): String = user.email
 
-    override fun isAccountNonExpired(): Boolean = isAccountNonExpired
+    override fun isAccountNonExpired(): Boolean {
+        TODO("Not yet implemented")
+    }
 
-    override fun isAccountNonLocked(): Boolean = isAccountNonLocked
+    override fun isAccountNonLocked(): Boolean {
+        TODO("Not yet implemented")
+    }
 
-    override fun isCredentialsNonExpired(): Boolean = isCredentialsNonExpired
+    override fun isCredentialsNonExpired(): Boolean {
+        TODO("Not yet implemented")
+    }
 
-    override fun isEnabled(): Boolean = isEnabled
+    override fun isEnabled(): Boolean {
+        TODO("Not yet implemented")
+    }
 }
